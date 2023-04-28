@@ -1,0 +1,20 @@
+python
+import csv
+import os
+
+# Define file path
+file_path = os.path.join('Data_Engineering_Project', 'data', 'data.csv')
+
+# Define header row and data rows
+header = ['Name', 'Age', 'Gender']
+data = [
+    ['John Smith', 25, 'Male'],
+    ['Jane Doe', 30, 'Female'],
+    ['Bob Johnson', 45, 'Male']
+]
+
+# Write data to CSV file
+with open(file_path, 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(header)
+    writer.writerows(data)
